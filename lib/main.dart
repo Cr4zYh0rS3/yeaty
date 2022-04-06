@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'yeaty',
         theme: ThemeData.light().copyWith(
           colorScheme: ColorScheme.fromSwatch().copyWith(
