@@ -98,7 +98,7 @@ class _MyCodesViewState extends State<MyCodesView> {
                           text: "Şimdi oluştur",
                         ),
                       ],
-                    ) /* add child content here */,
+                    ),
                   ),
                 ),
               ),

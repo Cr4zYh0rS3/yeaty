@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yeaty/screens/my_codes_view.dart';
+import 'package:yeaty/screens/my_wallet_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
     Text('Index 0'),
     Text('Index 1'),
     MyCodesView(),
-    Text('Index 3'),
+    MyWallet(),
     Text('Index 4'),
   ];
 
