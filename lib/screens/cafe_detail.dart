@@ -1,0 +1,134 @@
+import 'package:flutter/material.dart';
+import 'package:yeaty/widgets/carousel_image.dart';
+import 'package:yeaty/widgets/intro_title.dart';
+import 'package:yeaty/widgets/product_box.dart';
+import '../constants/colors.dart';
+
+class CafeDetail extends StatelessWidget {
+  const CafeDetail({Key? key}) : super(key: key);
+  static const RouteName = '/cafe-detail';
+
+  @override
+  Widget build(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
+    return Scaffold(
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          //crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CarouselImage(imagePath: [
+              'assets/images/coldDrinksStoreBg.jpg',
+              'assets/images/mainDishStoreBg.jpg',
+              'assets/images/cafeImage6.jpg',
+            ]),
+            Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.only(left: deviceSize.width * 0.04, top: deviceSize.height * 0.015),
+                child: Text("De'la Carte Cafe", style: TextStyle(fontFamily: 'AirbnbCerealExtraBold', fontSize: deviceSize.width * 0.07, color: kMainToneBlack))),
+            Container(
+              width: deviceSize.width * 0.95,
+              margin: EdgeInsets.only(top: deviceSize.height * 0.01),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: kMainToneRed,
+                    size: deviceSize.width * 0.05,
+                  ),
+                  Text(
+                    "3.7",
+                    style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.032, color: kMainToneBlack),
+                  ),
+                  Text(
+                    " (58 reviews)",
+                    style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.032, color: kMainToneBlack),
+                  ),
+                  SizedBox(width: deviceSize.width * 0.08),
+                  Icon(
+                    Icons.location_on_outlined,
+                    color: kMainToneRed,
+                    size: deviceSize.width * 0.05,
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "İstanbul",
+                        style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.032, color: kMainToneBlack),
+                      ),
+                      Text(
+                        "Bahçelievler",
+                        style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.032, color: kMainToneBlack),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: deviceSize.width * 0.08),
+                  Text(
+                    "Şu anda açık",
+                    style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.03, color: kMainToneGreen),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: deviceSize.height * 0.03),
+            Container(
+              margin: EdgeInsets.only(left: deviceSize.width * 0.04),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Mutfak Türü",
+                        style: TextStyle(fontFamily: 'AirbnbCerealBold', fontSize: deviceSize.width * 0.042, color: kMainToneBlack),
+                      ),
+                      Text(
+                        "Cafe",
+                        style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.03, color: kFoggyLightBlack),
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: deviceSize.width * 0.08),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Ortalama tutar",
+                        style: TextStyle(fontFamily: 'AirbnbCerealBold', fontSize: deviceSize.width * 0.042, color: kMainToneBlack),
+                      ),
+                      Text(
+                        "35₺ iki kişi için (ortalama)",
+                        style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.03, color: kFoggyLightBlack),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: deviceSize.height * 0.06),
+            IntroTitle(
+                mainTitle: "Yeaty puanlar ile ödeyin",
+                description: "De'la Carte Cafe mekanında seçili ürünleri Yeaty puanlarınız ile ödeyin. Ardından oluşacak QR Kodu mekanındaki görevliye göstermeniz yeterli olacaktır.",
+                direction: "Tümünü gör"),
+            Padding(
+              padding: EdgeInsets.only(left: deviceSize.width * 0.04),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                physics: BouncingScrollPhysics(),
+                child: Row(
+                  children: [
+                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
+                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
+                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

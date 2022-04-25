@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  carousel_slider: ^4.0.0
 
 
 
@@ -60,7 +61,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/
+     - assets/images/
+     - assets/icons/
+     - assets/fonts/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -87,8 +90,38 @@ flutter:
      - family: CustomIcon3
        fonts:
          - asset: assets/icons/CustomIcon3.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+     - family: CustomIcon4
+       fonts:
+         - asset: assets/icons/CustomIcon4.ttf
+     - family: CustomIcon5
+       fonts:
+         - asset: assets/icons/CustomIcon5.ttf
+  #    fonts start here
+     - family: AirbnbCerealLight
+       fonts:
+         - asset: assets/fonts/AirbnbCerealLight.ttf
+     - family: AirbnbCerealBlack
+       fonts:
+         - asset: assets/fonts/AirbnbCerealBlack.ttf
+     - family: AirbnbCerealBold
+       fonts:
+         - asset: assets/fonts/AirbnbCerealBold.ttf
+     - family: AirbnbCerealBook
+       fonts:
+         - asset: assets/fonts/AirbnbCerealBook.ttf
+     - family: AirbnbCerealExtraBold
+       fonts:
+         - asset: assets/fonts/AirbnbCerealExtraBold.ttf
+     - family: AirbnbCerealMedium
+       fonts:
+         - asset: assets/fonts/AirbnbCerealMedium.ttf
+
+  #       - asset: assets/fonts/AirbnbCerealBold.ttf 
+  #       - asset: assets/fonts/AirbnbCerealBook.ttf
+  #       - asset: assets/fonts/AirbnbCerealExtraBold.ttf
+  #       - asset: assets/fonts/AirbnbCerealLight.ttf
+  #       - asset: assets/fonts/AirbnbCerealMedium.ttf        
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

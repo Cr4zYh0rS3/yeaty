@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:yeaty/screens/discover.dart';
+import 'package:yeaty/screens/opportunity.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
+  static const RouteName = '/home';
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -11,8 +14,8 @@ class _HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
   static const List _widgetOptions = [
     //Sayfalar buraya
-    Text('Index 0'),
-    Text('Index 1'),
+    DiscoverView(),
+    Opportunity(),
     Text('Index 2'),
     Text('Index 3'),
     Text('Index 4'),
@@ -32,8 +35,7 @@ class _HomeViewState extends State<HomeView> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        unselectedItemColor: Theme.of(context).colorScheme.secondary,
+        unselectedItemColor: Theme.of(context).colorScheme.primary,
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

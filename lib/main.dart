@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yeaty/screens/cafe_detail.dart';
 import 'package:yeaty/screens/home_view.dart';
 
 void main() {
@@ -12,14 +13,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'yeaty',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: const Color(0xfffafafa),
-          secondary: const Color(0xffe3e3e3),
-          background: const Color(0xffe84b4a),
+          primary: const Color(0xffe3e3e3),
+          secondary: const Color(0xff484848),
+          background: const Color(0xffed3938),
         ),
       ),
       home: const HomeView(),
+      routes: {
+        HomeView.RouteName: (context) => const HomeView(),
+        CafeDetail.RouteName: (context) => const CafeDetail(),
+      },
     );
   }
 }
