@@ -29,7 +29,7 @@ class ProductBox extends StatelessWidget {
       children: [
         Container(
           width: deviceSize.width * 0.6,
-          height: deviceSize.height * 0.3,
+          height: deviceSize.width * 0.6,
           margin: EdgeInsets.only(right: deviceSize.width * 0.03),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
@@ -38,16 +38,16 @@ class ProductBox extends StatelessWidget {
                 //First Layer
                 Container(
                   width: deviceSize.width * 0.6,
-                  height: deviceSize.height * 0.3,
+                  height: deviceSize.width * 0.6,
                   child: Image(
                     image: AssetImage(image_adress),
                     fit: BoxFit.cover,
                   ),
                 ),
                 Container(
-                  width: deviceSize.width * 0.15,
-                  height: deviceSize.height * 0.04,
-                  margin: EdgeInsets.only(top: deviceSize.height * 0.25, left: deviceSize.width * 0.42),
+                  width: deviceSize.width * 0.13,
+                  height: deviceSize.width * 0.07,
+                  margin: EdgeInsets.only(top: deviceSize.width * 0.5, left: deviceSize.width * 0.42),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
                     color: kShadedDarkColorWhite,

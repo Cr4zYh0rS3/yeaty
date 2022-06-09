@@ -11,14 +11,8 @@ class PlaceBox extends StatelessWidget {
   final int rev_count;
   final int stars;
 
-  const PlaceBox({
-    Key? key,
-    required this.image_adress,
-    required this.title,
-    required this.cafe_name,
-    required this.rev_count,
-    required this.stars,
-  }) : super(key: key);
+  final bool isMain;
+  const PlaceBox({Key? key, required this.image_adress, required this.title, required this.cafe_name, required this.rev_count, required this.stars, required this.isMain}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +21,8 @@ class PlaceBox extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: deviceSize.width * 0.5,
-          height: deviceSize.height * 0.35,
+          width: isMain == true ? deviceSize.width * 0.5 : deviceSize.width * 0.45,
+          height: deviceSize.width * 0.65,
           margin: EdgeInsets.only(right: deviceSize.width * 0.03),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(deviceSize.width * 0.02),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:yeaty/screens/discover.dart';
+import 'package:yeaty/screens/my_codes_view.dart';
+import 'package:yeaty/screens/my_wallet_view.dart';
 import 'package:yeaty/screens/opportunity.dart';
+import 'package:yeaty/screens/profile_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -16,9 +19,9 @@ class _HomeViewState extends State<HomeView> {
     //Sayfalar buraya
     DiscoverView(),
     Opportunity(),
-    Text('Index 2'),
-    Text('Index 3'),
-    Text('Index 4'),
+    MyCodesView(),
+    MyWallet(),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {

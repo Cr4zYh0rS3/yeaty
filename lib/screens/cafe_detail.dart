@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:yeaty/widgets/carousel_image.dart';
+import 'package:yeaty/widgets/comment_card.dart';
 import 'package:yeaty/widgets/intro_title.dart';
+import 'package:yeaty/widgets/other_features.dart';
 import 'package:yeaty/widgets/product_box.dart';
 import '../constants/colors.dart';
 
-class CafeDetail extends StatelessWidget {
+class CafeDetail extends StatefulWidget {
   const CafeDetail({Key? key}) : super(key: key);
   static const RouteName = '/cafe-detail';
 
+  @override
+  State<CafeDetail> createState() => _CafeDetailState();
+}
+
+class _CafeDetailState extends State<CafeDetail> {
   @override
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
@@ -111,7 +118,8 @@ class CafeDetail extends StatelessWidget {
             IntroTitle(
                 mainTitle: "Yeaty puanlar ile ödeyin",
                 description: "De'la Carte Cafe mekanında seçili ürünleri Yeaty puanlarınız ile ödeyin. Ardından oluşacak QR Kodu mekanındaki görevliye göstermeniz yeterli olacaktır.",
-                direction: "Tümünü gör"),
+                direction_name: "Tümünü gör",
+                direction_path: 'see-more'),
             Padding(
               padding: EdgeInsets.only(left: deviceSize.width * 0.04),
               child: SingleChildScrollView(
@@ -124,6 +132,26 @@ class CafeDetail extends StatelessWidget {
                     ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
                   ],
                 ),
+              ),
+            ),
+            SizedBox(height: deviceSize.height * 0.03),
+            OtherFeatures(),
+            // Comment section
+            SizedBox(height: deviceSize.height * 0.03),
+            Container(
+              width: deviceSize.width * 0.9,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Kullanıcı Yorumları",
+                    style: TextStyle(fontFamily: 'AirbnbCerealExtraBold', color: kMainToneBlack, fontSize: deviceSize.width * 0.045),
+                  ),
+                  SizedBox(height: deviceSize.height * 0.02),
+                  CommentCard(),
+                  CommentCard(),
+                  CommentCard(),
+                ],
               ),
             ),
           ],

@@ -5,7 +5,7 @@ import '../constants/colors.dart';
 class TopbarBox extends StatelessWidget {
   final String boxname;
   
-  TopbarBox({Key? key, required this.boxname,}) : super(key: key);
+  TopbarBox({Key? key, required this.boxname}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
