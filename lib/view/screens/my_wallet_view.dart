@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
 import '../widgets/red_button.dart';
 
 class MyWallet extends StatefulWidget {

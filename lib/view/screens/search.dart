@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:yeaty/constants/colors.dart';
-import 'package:yeaty/widgets/intro_title.dart';
-import 'package:yeaty/widgets/location_box.dart';
-import 'package:yeaty/widgets/place_box.dart';
-import 'package:yeaty/widgets/search_bar.dart';
+import '../widgets/location_box.dart';
+import '../widgets/place_box.dart';
+import '../widgets/search_bar.dart';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
@@ -79,28 +78,21 @@ class _SearchState extends State<Search> {
                     ),
                   ),
                   Padding(
-                    //FIXME used padding to center fix it
-                    padding: EdgeInsets.only(left: deviceSize.width * 0.032, top: deviceSize.height * 0.01),
-                    child: GridView.count(
-                      shrinkWrap: true,
-                      primary: true,
-                      physics: BouncingScrollPhysics(),
-                      //padding: const EdgeInsets.all(20.0),
-                      crossAxisSpacing: 10.0,
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.58,
-                      children: <Widget>[
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                        PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
-                      ],
-                    ),
-                  ),
+                      //FIXME used padding to center fix it
+                      padding: EdgeInsets.only(left: deviceSize.width * 0.032, top: deviceSize.height * 0.01),
+                      child: GridView.builder(
+                          shrinkWrap: true,
+                          primary: true,
+                          physics: BouncingScrollPhysics(),
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 10.0,
+                            childAspectRatio: 0.58,
+                          ),
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false);
+                          })),
                 ],
               ),
             )

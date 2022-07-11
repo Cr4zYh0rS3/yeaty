@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yeaty/widgets/location_box.dart';
-import 'package:yeaty/widgets/place_box.dart';
-import 'package:yeaty/widgets/search_bar.dart';
-
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
+import '../widgets/place_box.dart';
+import '../widgets/search_bar.dart';
 
 class PopularShowMore extends StatefulWidget {
   const PopularShowMore({Key? key}) : super(key: key);
@@ -39,9 +37,23 @@ class _PopularShowMoreState extends State<PopularShowMore> {
                     ),
                   ),
                   Padding(
-                    //FIXME used padding to center fix it
-                    padding: EdgeInsets.only(left: deviceSize.width * 0.032, top: deviceSize.height * 0.01),
-                    child: GridView.count(
+                      //FIXME used padding to center fix it
+                      padding: EdgeInsets.only(left: deviceSize.width * 0.032, top: deviceSize.height * 0.01),
+                      child: GridView.builder(
+                          shrinkWrap: true,
+                          primary: true,
+                          physics: BouncingScrollPhysics(),
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 10.0,
+                            childAspectRatio: 0.58,
+                          ),
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false);
+                          })
+
+                      /*GridView.count(
                       shrinkWrap: true,
                       primary: true,
                       physics: BouncingScrollPhysics(),
@@ -59,8 +71,9 @@ class _PopularShowMoreState extends State<PopularShowMore> {
                         PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
                         PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false),
                       ],
-                    ),
-                  ),
+                    ),*/
+
+                      ),
                 ],
               ),
             )

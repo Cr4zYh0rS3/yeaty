@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:yeaty/widgets/carousel_image.dart';
-import 'package:yeaty/widgets/comment_card.dart';
-import 'package:yeaty/widgets/intro_title.dart';
-import 'package:yeaty/widgets/other_features.dart';
-import 'package:yeaty/widgets/product_box.dart';
-import '../constants/colors.dart';
+
+import '../../constants/colors.dart';
+import '../widgets/carousel_image.dart';
+import '../widgets/comment_card.dart';
+import '../widgets/intro_title.dart';
+import '../widgets/other_features.dart';
+import '../widgets/product_box.dart';
 
 class CafeDetail extends StatefulWidget {
   const CafeDetail({Key? key}) : super(key: key);
@@ -127,9 +128,9 @@ class _CafeDetailState extends State<CafeDetail> {
                 physics: BouncingScrollPhysics(),
                 child: Row(
                   children: [
-                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
-                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
-                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
+                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
+                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
+                    ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
                   ],
                 ),
               ),

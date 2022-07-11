@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
 
 class OpportunityBanner extends StatelessWidget {
   const OpportunityBanner({Key? key}) : super(key: key);

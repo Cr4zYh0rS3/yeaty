@@ -2,7 +2,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:yeaty/constants/colors.dart';
-import 'package:yeaty/widgets/red_button.dart';
+
+
+import '../widgets/red_button.dart';
 
 class MyCodesView extends StatefulWidget {
   const MyCodesView({Key? key}) : super(key: key);

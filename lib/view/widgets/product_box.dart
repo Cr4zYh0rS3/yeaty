@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
 
-class OpportunityBox extends StatelessWidget {
+class ProductBox extends StatelessWidget {
   final String image_adress;
-  final String desc;
+  final int price;
   final String title;
   final String cafe_name;
   final int rev_count;
   final int stars;
-  const OpportunityBox({
+  final bool isMain;
+
+  const ProductBox({
     Key? key,
     required this.image_adress,
-    required this.desc,
+    required this.price,
     required this.title,
     required this.cafe_name,
     required this.rev_count,
     required this.stars,
+    required this.isMain,
   }) : super(key: key);
 
   @override
@@ -26,8 +30,8 @@ class OpportunityBox extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: deviceSize.width * 0.55,
-          height: deviceSize.height * 0.28,
+          width: isMain == true ? deviceSize.width * 0.6 : deviceSize.width * 0.45,
+          height: deviceSize.width * 0.6,
           margin: EdgeInsets.only(right: deviceSize.width * 0.03),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
@@ -35,24 +39,29 @@ class OpportunityBox extends StatelessWidget {
               children: [
                 //First Layer
                 Container(
-                  width: deviceSize.width * 0.55,
-                  height: deviceSize.height * 0.28,
+                  width: deviceSize.width * 0.6,
+                  height: deviceSize.width * 0.6,
                   child: Image(
                     image: AssetImage(image_adress),
                     fit: BoxFit.cover,
                   ),
                 ),
-                //Second Layer
                 Container(
-                  color: Colors.black.withOpacity(0.4),
-                ),
-                //Third Layer
-                Center(
-                  child: Text(
-                    desc,
-                    style: TextStyle(color: kLightColorWhite, fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.035),
-                    textAlign: TextAlign.center,
+                  width: deviceSize.width * 0.13,
+                  height: deviceSize.width * 0.07,
+                  margin: EdgeInsets.only(top: deviceSize.width * 0.5, left: isMain == true ? deviceSize.width * 0.42 : deviceSize.width * 0.28),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
+                    color: kShadedDarkColorWhite,
                   ),
+                  child: Center(
+                      child: Text(
+                    "${price.toString()} ₺",
+                    style: TextStyle(
+                      fontFamily: 'AirbnbCerealMedium',
+                      color: kMainToneBlack,
+                    ),
+                  )),
                 ),
               ],
             ),

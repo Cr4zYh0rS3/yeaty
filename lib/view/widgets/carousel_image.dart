@@ -1,8 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
 
 class CarouselImage extends StatefulWidget {
   final List imagePath;
@@ -122,7 +121,11 @@ class _CarouselImageState extends State<CarouselImage> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        isliked = true;
+                        if (isliked == false) {
+                          isliked = true;
+                        } else {
+                          isliked = false;
+                        }
                       });
                     },
                     child: CircleAvatar(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:yeaty/screens/discover.dart';
-import 'package:yeaty/screens/my_codes_view.dart';
-import 'package:yeaty/screens/my_wallet_view.dart';
-import 'package:yeaty/screens/opportunity.dart';
-import 'package:yeaty/screens/profile_view.dart';
+import 'package:yeaty/view/screens/discover.dart';
+import 'package:yeaty/view/screens/my_codes_view.dart';
+import 'package:yeaty/view/screens/my_wallet_view.dart';
+import 'package:yeaty/view/screens/opportunity.dart';
+import 'package:yeaty/view/screens/profile_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -15,6 +15,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
+
   static const List _widgetOptions = [
     //Sayfalar buraya
     DiscoverView(),

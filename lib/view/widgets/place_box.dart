@@ -1,25 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
 
-class ProductBox extends StatelessWidget {
+class PlaceBox extends StatelessWidget {
   final String image_adress;
-  final int price;
+
   final String title;
   final String cafe_name;
   final int rev_count;
   final int stars;
 
-  const ProductBox({
-    Key? key,
-    required this.image_adress,
-    required this.price,
-    required this.title,
-    required this.cafe_name,
-    required this.rev_count,
-    required this.stars,
-  }) : super(key: key);
+  final bool isMain;
+  const PlaceBox({Key? key, required this.image_adress, required this.title, required this.cafe_name, required this.rev_count, required this.stars, required this.isMain}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,40 +21,14 @@ class ProductBox extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: deviceSize.width * 0.6,
-          height: deviceSize.width * 0.6,
+          width: isMain == true ? deviceSize.width * 0.5 : deviceSize.width * 0.45,
+          height: deviceSize.width * 0.65,
           margin: EdgeInsets.only(right: deviceSize.width * 0.03),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
-            child: Stack(
-              children: [
-                //First Layer
-                Container(
-                  width: deviceSize.width * 0.6,
-                  height: deviceSize.width * 0.6,
-                  child: Image(
-                    image: AssetImage(image_adress),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Container(
-                  width: deviceSize.width * 0.13,
-                  height: deviceSize.width * 0.07,
-                  margin: EdgeInsets.only(top: deviceSize.width * 0.5, left: deviceSize.width * 0.42),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
-                    color: kShadedDarkColorWhite,
-                  ),
-                  child: Center(
-                      child: Text(
-                    "${price.toString()} ₺",
-                    style: TextStyle(
-                      fontFamily: 'AirbnbCerealMedium',
-                      color: kMainToneBlack,
-                    ),
-                  )),
-                ),
-              ],
+            child: Image(
+              image: AssetImage(image_adress),
+              fit: BoxFit.cover,
             ),
           ),
         ),

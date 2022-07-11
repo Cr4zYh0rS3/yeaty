@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yeaty/widgets/default_topbar.dart';
-import 'package:yeaty/widgets/intro_title.dart';
-import 'package:yeaty/widgets/opportunity_banner.dart';
-import 'package:yeaty/widgets/opportunity_box.dart';
-
-import '../constants/colors.dart';
+import '../../constants/colors.dart';
+import '../widgets/intro_title.dart';
+import '../widgets/opportunity_banner.dart';
+import '../widgets/opportunity_box.dart';
 import '../widgets/product_box.dart';
 
 class Opportunity extends StatefulWidget {
@@ -70,21 +68,37 @@ class _OpportunityState extends State<Opportunity> {
                       mainTitle: "Yeaty puanlar ile ödeyin",
                       description: "Seçili ürünleri anlaşmalı restoran ve kafelerimizde topladığınız Yeaty puanlar ile ödeyin.",
                       direction_name: "Tümünü gör",
-                      direction_path: 'see-more'),
+                      direction_path: '/product-show-more'),
                   Padding(
-                    padding: EdgeInsets.only(left: deviceSize.width * 0.04, bottom: deviceSize.height * 0.012),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      physics: BouncingScrollPhysics(),
-                      child: Row(
-                        children: [
-                          ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
-                          ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
-                          ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4),
-                        ],
+                    padding: EdgeInsets.only(left: deviceSize.width * 0.04),
+                    child: SizedBox(
+                      width: deviceSize.width,
+                      height: deviceSize.width * 0.75,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 4,
+                        itemBuilder: ((context, index) {
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/product-details');
+                            },
+                            child: ProductBox(
+                              image_adress: 'assets/images/mainDishStoreBg.jpg',
+                              price: 60,
+                              title: "Uber Burger",
+                              cafe_name: "Uber Restorant",
+                              rev_count: 52,
+                              stars: 4,
+                              isMain: true,
+                            ),
+                          );
+                        }),
                       ),
                     ),
                   ),
+                  SizedBox(height: deviceSize.height * 0.03),
                 ],
               ),
             ),
