@@ -47,7 +47,7 @@ class _SearchBarState extends State<SearchBar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.9,
                 height: deviceSize.height * 0.065,
                 child: TextField(
@@ -61,7 +61,7 @@ class _SearchBarState extends State<SearchBar> {
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(deviceSize.width * 0.02)),
                     suffixIcon: IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.search),
+                      icon: const Icon(Icons.search),
                     ),
                   ),
                 ),

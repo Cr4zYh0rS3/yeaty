@@ -24,7 +24,7 @@ class CustomIntroWidget extends StatelessWidget {
             height: deviceSize.width * 0.8,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               shrinkWrap: true,
               itemCount: 4,
               itemBuilder: ((context, index) {
@@ -32,14 +32,14 @@ class CustomIntroWidget extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, '/cafe-detail');
                   },
-                  child: PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
+                  child: const PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
                 );
               }),
             ),
           ),
         ),
         SizedBox(height: deviceSize.height * 0.02),
-        IntroTitle(
+        const IntroTitle(
             mainTitle: "Yeaty puanlar ile ödeyin",
             description: "Seçili ürünleri anlaşmalı restoran ve kafelerimizde topladığınız Yeaty puanlar ile ödeyin.",
             direction_name: "Tümünü gör",
@@ -51,7 +51,7 @@ class CustomIntroWidget extends StatelessWidget {
             height: deviceSize.width * 0.75,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               shrinkWrap: true,
               itemCount: 4,
               itemBuilder: ((context, index) {
@@ -59,7 +59,7 @@ class CustomIntroWidget extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, '/product-details');
                   },
-                  child: ProductBox(
+                  child: const ProductBox(
                     image_adress: 'assets/images/mainDishStoreBg.jpg',
                     price: 60,
                     title: "Uber Burger",

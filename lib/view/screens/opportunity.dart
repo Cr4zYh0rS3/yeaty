@@ -32,41 +32,64 @@ class _OpportunityState extends State<Opportunity> {
       body: Column(
         children: [
           //DefaultTopbar(title: "Fırsat ve ürünler"),
-          Container(
+          SizedBox(
             width: deviceSize.width,
             //FIXME height doğru değil
-            height: deviceSize.height - kBottomNavigationBarHeight - AppBar().preferredSize.height - 24,
+            height: deviceSize.height -
+                kBottomNavigationBarHeight -
+                AppBar().preferredSize.height -
+                24,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Column(
                 children: [
-                  OpportunityBanner(),
+                  const OpportunityBanner(),
                   SizedBox(height: deviceSize.height * 0.02),
-                  IntroTitle(
+                  const IntroTitle(
                       mainTitle: "Yeaty özel kampanyaları",
-                      description: "Tek tıkla oluşturacağınız QR Kodu görevliye göstererek Yeaty avantajlarından faydalanın. İşste bu kadar basit !",
+                      description:
+                          "Tek tıkla oluşturacağınız QR Kodu görevliye göstererek Yeaty avantajlarından faydalanın. İşste bu kadar basit !",
                       direction_name: "Tümünü gör",
                       direction_path: 'see-more'),
                   Padding(
                     padding: EdgeInsets.only(left: deviceSize.width * 0.04),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       child: Row(
-                        children: [
-                          OpportunityBox(image_adress: 'assets/images/cafeImage6.jpg', desc: "Demo description", title: "title", cafe_name: "cafe_name", rev_count: 58, stars: 5),
+                        children: const [
                           OpportunityBox(
-                              image_adress: 'assets/images/cafeImage6.jpg', desc: "Öğlen 12 den önce hesap tutarında %15 indirim", title: "title", cafe_name: "cafe_name", rev_count: 58, stars: 5),
-                          OpportunityBox(image_adress: 'assets/images/cafeImage6.jpg', desc: "description of top", title: "title", cafe_name: "cafe_name", rev_count: 58, stars: 5),
+                              image_adress: 'assets/images/cafeImage6.jpg',
+                              desc: "Demo description",
+                              title: "title",
+                              cafe_name: "cafe_name",
+                              rev_count: 58,
+                              stars: 5),
+                          OpportunityBox(
+                              image_adress: 'assets/images/cafeImage6.jpg',
+                              desc:
+                                  "Öğlen 12 den önce hesap tutarında %15 indirim",
+                              title: "title",
+                              cafe_name: "cafe_name",
+                              rev_count: 58,
+                              stars: 5),
+                          OpportunityBox(
+                              image_adress: 'assets/images/cafeImage6.jpg',
+                              desc: "description of top",
+                              title: "title",
+                              cafe_name: "cafe_name",
+                              rev_count: 58,
+                              stars: 5),
                         ],
                       ),
                     ),
                   ),
                   SizedBox(height: deviceSize.height * 0.02),
-                  IntroTitle(
+                  const IntroTitle(
                       mainTitle: "Yeaty puanlar ile ödeyin",
-                      description: "Seçili ürünleri anlaşmalı restoran ve kafelerimizde topladığınız Yeaty puanlar ile ödeyin.",
+                      description:
+                          "Seçili ürünleri anlaşmalı restoran ve kafelerimizde topladığınız Yeaty puanlar ile ödeyin.",
                       direction_name: "Tümünü gör",
                       direction_path: '/product-show-more'),
                   Padding(
@@ -76,7 +99,7 @@ class _OpportunityState extends State<Opportunity> {
                       height: deviceSize.width * 0.75,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        physics: BouncingScrollPhysics(),
+                        physics: const BouncingScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: 4,
                         itemBuilder: ((context, index) {
@@ -84,7 +107,7 @@ class _OpportunityState extends State<Opportunity> {
                             onTap: () {
                               Navigator.pushNamed(context, '/product-details');
                             },
-                            child: ProductBox(
+                            child: const ProductBox(
                               image_adress: 'assets/images/mainDishStoreBg.jpg',
                               price: 60,
                               title: "Uber Burger",

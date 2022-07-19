@@ -34,7 +34,7 @@ class OpportunityBox extends StatelessWidget {
             child: Stack(
               children: [
                 //First Layer
-                Container(
+                SizedBox(
                   width: deviceSize.width * 0.55,
                   height: deviceSize.height * 0.28,
                   child: Image(

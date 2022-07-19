@@ -21,13 +21,13 @@ class _PopularShowMoreState extends State<PopularShowMore> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SearchBar(),
-            Container(
+            const SearchBar(),
+            SizedBox(
               width: deviceSize.width,
               height: deviceSize.height - deviceSize.height * 0.18,
               child: ListView(
                 shrinkWrap: true,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.only(left: deviceSize.width * 0.05, bottom: deviceSize.width * 0.03, top: deviceSize.width * 0.01),
@@ -42,15 +42,15 @@ class _PopularShowMoreState extends State<PopularShowMore> {
                       child: GridView.builder(
                           shrinkWrap: true,
                           primary: true,
-                          physics: BouncingScrollPhysics(),
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          physics: const BouncingScrollPhysics(),
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             crossAxisSpacing: 10.0,
                             childAspectRatio: 0.58,
                           ),
                           itemCount: 10,
                           itemBuilder: (context, index) {
-                            return PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false);
+                            return const PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: false);
                           })
 
                       /*GridView.count(

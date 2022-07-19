@@ -16,13 +16,13 @@ class ProductShowMore extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SearchBar(),
-            Container(
+            const SearchBar(),
+            SizedBox(
               width: deviceSize.width,
               height: deviceSize.height - deviceSize.height * 0.18,
               child: ListView(
                 shrinkWrap: true,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.only(left: deviceSize.width * 0.05, bottom: deviceSize.width * 0.03, top: deviceSize.width * 0.01),
@@ -37,7 +37,7 @@ class ProductShowMore extends StatelessWidget {
                     child: GridView.count(
                       shrinkWrap: true,
                       primary: true,
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       //padding: const EdgeInsets.all(20.0),
                       crossAxisSpacing: 10.0,
                       crossAxisCount: 2,
@@ -47,7 +47,7 @@ class ProductShowMore extends StatelessWidget {
                           onTap: () {
                             Navigator.pushNamed(context, '/product-details');
                           },
-                          child: ProductBox(
+                          child: const ProductBox(
                             image_adress: 'assets/images/mainDishStoreBg.jpg',
                             price: 60,
                             title: "Uber Burger3",
@@ -61,7 +61,7 @@ class ProductShowMore extends StatelessWidget {
                           onTap: () {
                             Navigator.pushNamed(context, '/product-details');
                           },
-                          child: ProductBox(
+                          child: const ProductBox(
                             image_adress: 'assets/images/mainDishStoreBg.jpg',
                             price: 60,
                             title: "Uber Burger3",

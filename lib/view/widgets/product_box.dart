@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import '../../constants/colors.dart';
 
@@ -38,7 +37,7 @@ class ProductBox extends StatelessWidget {
             child: Stack(
               children: [
                 //First Layer
-                Container(
+                SizedBox(
                   width: deviceSize.width * 0.6,
                   height: deviceSize.width * 0.6,
                   child: Image(
@@ -57,7 +56,7 @@ class ProductBox extends StatelessWidget {
                   child: Center(
                       child: Text(
                     "${price.toString()} ₺",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: 'AirbnbCerealMedium',
                       color: kMainToneBlack,
                     ),

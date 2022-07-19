@@ -19,7 +19,7 @@ class LoginAuthenticated extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.9,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,7 +93,7 @@ class LoginAuthenticated extends StatelessWidget {
                   ],
                 ),
               ),
-              ConfirmButton(title: "Giriş yap", route: '/home', isEnd: true),
+              const ConfirmButton(title: "Giriş yap", route: '/home', isEnd: true),
             ],
           ),
         ),

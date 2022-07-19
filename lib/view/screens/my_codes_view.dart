@@ -39,7 +39,7 @@ class _MyCodesViewState extends State<MyCodesView> {
         ],
       )),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             Container(

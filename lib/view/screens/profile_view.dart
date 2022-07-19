@@ -24,7 +24,7 @@ class _ProfileState extends State<Profile> {
                 fontFamily: "AirbnbCerealMedium",
               ),
             ),
-            Spacer(),
+            const Spacer(),
             IconButton(
               icon: const Icon(Icons.notifications_outlined),
               color: kMainToneBlack,
@@ -33,7 +33,7 @@ class _ProfileState extends State<Profile> {
           ],
         )),
         body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             SizedBox(
               height: 15.h,
@@ -66,7 +66,7 @@ class _ProfileState extends State<Profile> {
                         ],
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -112,7 +112,7 @@ class _ProfileState extends State<Profile> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 3.0, right: 3.h, top: 5.h),
-                        child: Text("Yeaty'e işletmeni nasıl kaydedip kazancını arttırabileceğin hakkında bilgi sahibi ol"),
+                        child: const Text("Yeaty'e işletmeni nasıl kaydedip kazancını arttırabileceğin hakkında bilgi sahibi ol"),
                       ),
                     ],
                   ),
@@ -127,7 +127,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Bilgilerimi düzenle"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.edit_outlined))],
+                      children: [const Text("Bilgilerimi düzenle"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.edit_outlined))],
                     ),
                   ),
                 ),
@@ -135,7 +135,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Favori mekanlarım"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.favorite_outline))],
+                      children: [const Text("Favori mekanlarım"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_outline))],
                     ),
                   ),
                 ),
@@ -143,7 +143,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Bildirimlerim"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.notifications_outlined))],
+                      children: [const Text("Bildirimlerim"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.notifications_outlined))],
                     ),
                   ),
                 ),
@@ -151,7 +151,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Favori ürünlerim"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.coffee_outlined))],
+                      children: [const Text("Favori ürünlerim"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.coffee_outlined))],
                     ),
                   ),
                 ),
@@ -159,7 +159,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Kullanıcı ve gizlilik sözleşmesi"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.description_outlined))],
+                      children: [const Text("Kullanıcı ve gizlilik sözleşmesi"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.description_outlined))],
                     ),
                   ),
                 ),
@@ -167,7 +167,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Yeaty işletme kaydı"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.storefront_outlined))],
+                      children: [const Text("Yeaty işletme kaydı"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.storefront_outlined))],
                     ),
                   ),
                 ),
@@ -175,7 +175,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Yardım al"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.help_outline))],
+                      children: [const Text("Yardım al"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.help_outline))],
                     ),
                   ),
                 ),
@@ -183,7 +183,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Bizi değerlendir"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.star_outline))],
+                      children: [const Text("Bizi değerlendir"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.star_outline))],
                     ),
                   ),
                 ),
@@ -191,7 +191,7 @@ class _ProfileState extends State<Profile> {
                   height: 10.h,
                   child: Card(
                     child: Row(
-                      children: [Text("Çıkış yap"), Spacer(), IconButton(onPressed: () {}, icon: Icon(Icons.logout_outlined))],
+                      children: [const Text("Çıkış yap"), const Spacer(), IconButton(onPressed: () {}, icon: const Icon(Icons.logout_outlined))],
                     ),
                   ),
                 ),

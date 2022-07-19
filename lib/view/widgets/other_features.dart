@@ -7,7 +7,7 @@ class OtherFeatures extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       width: deviceSize.width * 0.9,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,11 +19,11 @@ class OtherFeatures extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.35,
                 child: Row(
                   children: [
-                    Icon(Icons.verified_outlined, color: kMainToneGreen),
+                    const Icon(Icons.verified_outlined, color: kMainToneGreen),
                     Flexible(
                         child: Text(
                       "Açık  alan",
@@ -34,11 +34,11 @@ class OtherFeatures extends StatelessWidget {
                 ),
               ),
               SizedBox(width: deviceSize.width * 0.2),
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.35,
                 child: Row(
                   children: [
-                    Icon(Icons.verified_outlined, color: kMainToneGreen),
+                    const Icon(Icons.verified_outlined, color: kMainToneGreen),
                     Flexible(
                       child: Text(
                         "Vegan seçenekler",
@@ -55,11 +55,11 @@ class OtherFeatures extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.35,
                 child: Row(
                   children: [
-                    Icon(Icons.verified_outlined, color: kMainToneGreen),
+                    const Icon(Icons.verified_outlined, color: kMainToneGreen),
                     Flexible(
                       child: Text(
                         "WiFi",
@@ -71,11 +71,11 @@ class OtherFeatures extends StatelessWidget {
                 ),
               ),
               SizedBox(width: deviceSize.width * 0.2),
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.35,
                 child: Row( 
                   children: [
-                    Icon(Icons.verified_outlined, color: kMainToneGreen),
+                    const Icon(Icons.verified_outlined, color: kMainToneGreen),
                     Flexible(
                       child: Text(
                         "Sigara Alanı",

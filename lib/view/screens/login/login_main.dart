@@ -24,7 +24,7 @@ class _LoginMainState extends State<LoginMain> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.9,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,9 +75,9 @@ class _LoginMainState extends State<LoginMain> {
                     SizedBox(height: deviceSize.height * 0.015),
                     Row(
                       children: [
-                        SocialMediaButton(icon: Icon(Icons.android, color: kMainToneBlack), title: "Google ile devam et"),
+                        const SocialMediaButton(icon: Icon(Icons.android, color: kMainToneBlack), title: "Google ile devam et"),
                         SizedBox(width: deviceSize.width * 0.01),
-                        SocialMediaButton(icon: Icon(Icons.facebook, color: kMainToneBlack), title: "Facebook ile devam et"),
+                        const SocialMediaButton(icon: Icon(Icons.facebook, color: kMainToneBlack), title: "Facebook ile devam et"),
                       ],
                     ),
                     SizedBox(height: deviceSize.height * 0.045),
@@ -142,7 +142,7 @@ class _LoginMainState extends State<LoginMain> {
                   ],
                 ),
               ),
-              ConfirmButton(title: "Devam et", route: '/login-details', isEnd: false),
+              const ConfirmButton(title: "Devam et", route: '/login-details', isEnd: false),
             ],
           ),
         ),

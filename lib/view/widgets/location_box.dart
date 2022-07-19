@@ -15,7 +15,7 @@ class LocationBox extends StatelessWidget {
       padding: EdgeInsets.only(right: deviceSize.width * 0.018),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(deviceSize.width * 0.04),
-        child: Container(
+        child: SizedBox(
             width: deviceSize.width * 0.47,
             height: deviceSize.width * 0.34,
             child: Stack(

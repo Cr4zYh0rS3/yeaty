@@ -5,7 +5,6 @@ import '../widgets/cstm_intro_widget.dart';
 import '../widgets/discoveronmap_banner.dart';
 import '../widgets/intro_title.dart';
 import '../widgets/place_box.dart';
-import '../widgets/product_box.dart';
 import '../widgets/topbar_box.dart';
 
 class DiscoverView extends StatefulWidget {
@@ -32,27 +31,36 @@ class _DiscoverViewState extends State<DiscoverView> {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: deviceSize.width * 0.04, top: deviceSize.width * 0.02, right: deviceSize.width * 0.04),
+                  padding: EdgeInsets.only(
+                      left: deviceSize.width * 0.04,
+                      top: deviceSize.width * 0.02,
+                      right: deviceSize.width * 0.04),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         "Keşfet",
-                        style: TextStyle(fontFamily: 'AirbnbCerealMedium', fontSize: deviceSize.width * 0.045, color: kMainToneBlack),
+                        style: TextStyle(
+                            fontFamily: 'AirbnbCerealMedium',
+                            fontSize: deviceSize.width * 0.045,
+                            color: kMainToneBlack),
                       ),
                       GestureDetector(
                           onTap: () {
                             Navigator.pushNamed(context, '/search');
                           },
-                          child: Icon(Icons.search, color: kMainToneBlack)),
+                          child:
+                              const Icon(Icons.search, color: kMainToneBlack)),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: deviceSize.width * 0.04, top: deviceSize.width * 0.04),
+                  padding: EdgeInsets.only(
+                      left: deviceSize.width * 0.04,
+                      top: deviceSize.width * 0.04),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -61,7 +69,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                               currentindex = 1;
                             });
                           },
-                          child: TopbarBox(
+                          child: const TopbarBox(
                             boxname: "Size Özel",
                           ),
                         ),
@@ -71,7 +79,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                               currentindex = 2;
                             });
                           },
-                          child: TopbarBox(
+                          child: const TopbarBox(
                             boxname: "Kahve",
                           ),
                         ),
@@ -81,7 +89,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                               currentindex = 3;
                             });
                           },
-                          child: TopbarBox(
+                          child: const TopbarBox(
                             boxname: "Akşam Yemeği",
                           ),
                         ),
@@ -91,7 +99,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                               currentindex = 4;
                             });
                           },
-                          child: TopbarBox(
+                          child: const TopbarBox(
                             boxname: "Kahvaltı",
                           ),
                         ),
@@ -101,7 +109,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                               currentindex = 5;
                             });
                           },
-                          child: TopbarBox(
+                          child: const TopbarBox(
                             boxname: "Tatlı",
                           ),
                         ),
@@ -111,7 +119,7 @@ class _DiscoverViewState extends State<DiscoverView> {
                               currentindex = 6;
                             });
                           },
-                          child: TopbarBox(
+                          child: const TopbarBox(
                             boxname: "Açık Hava",
                           ),
                         ),
@@ -123,88 +131,135 @@ class _DiscoverViewState extends State<DiscoverView> {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           width: deviceSize.width,
-          height: deviceSize.height - kBottomNavigationBarHeight - deviceSize.width * 0.3,
+          height: deviceSize.height -
+              kBottomNavigationBarHeight -
+              deviceSize.width * 0.3,
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 if (currentindex == 1) ...[
-                  CustomIntroWidget(
+                  const CustomIntroWidget(
                     maintitle: "Çevrenizde Popüler",
-                    description: "Birçok yeaty kullanıcısının tercih ettiği, eşsiz deneyimler sunan kafe ve restoranları keşfedin",
+                    description:
+                        "Birçok yeaty kullanıcısının tercih ettiği, eşsiz deneyimler sunan kafe ve restoranları keşfedin",
                     direction_name: 'Tümünü gör',
                     direction_path: '/popular-show-more',
-                    widget: PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
+                    widget: PlaceBox(
+                        image_adress: 'assets/images/yeatyAppLoginBg.jpg',
+                        title: "Uber Burger",
+                        cafe_name: "Uber Restorant",
+                        rev_count: 52,
+                        stars: 4,
+                        isMain: true),
                   ),
                 ],
                 if (currentindex == 2) ...[
-                  CustomIntroWidget(
+                  const CustomIntroWidget(
                     maintitle: "En Popüler Kahveciler",
-                    description: "Bir kahve molası vererek günün yorgunluğundan ve stresinden kurtulun. Yeaty deki kahve mekanlarını keşfedin",
+                    description:
+                        "Bir kahve molası vererek günün yorgunluğundan ve stresinden kurtulun. Yeaty deki kahve mekanlarını keşfedin",
                     direction_name: 'Tümünü gör',
                     direction_path: '/popular-show-more',
-                    widget: PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Cafe", cafe_name: "Uber Cafe'", rev_count: 52, stars: 4, isMain: true),
+                    widget: PlaceBox(
+                        image_adress: 'assets/images/yeatyAppLoginBg.jpg',
+                        title: "Uber Cafe",
+                        cafe_name: "Uber Cafe'",
+                        rev_count: 52,
+                        stars: 4,
+                        isMain: true),
                   ),
                 ],
                 if (currentindex == 3) ...[
-                  CustomIntroWidget(
+                  const CustomIntroWidget(
                     maintitle: "Yemeği nerde yesek?",
-                    description: "Yeaty kullanıcılarına özel fırsatlar ile keyifli bir yemeğe ne dersiniz",
+                    description:
+                        "Yeaty kullanıcılarına özel fırsatlar ile keyifli bir yemeğe ne dersiniz",
                     direction_name: 'Tümünü gör',
                     direction_path: '/popular-show-more',
-                    widget: PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
+                    widget: PlaceBox(
+                        image_adress: 'assets/images/yeatyAppLoginBg.jpg',
+                        title: "Uber Burger",
+                        cafe_name: "Uber Restorant",
+                        rev_count: 52,
+                        stars: 4,
+                        isMain: true),
                   ),
                 ],
                 if (currentindex == 4) ...[
-                  CustomIntroWidget(
+                  const CustomIntroWidget(
                     maintitle: "Kahvaltı",
-                    description: "Birbirinden güzel kahvaltı mekanlarında yeaty ile güne güzel bir başlangıç yapın",
+                    description:
+                        "Birbirinden güzel kahvaltı mekanlarında yeaty ile güne güzel bir başlangıç yapın",
                     direction_name: 'Tümünü gör',
                     direction_path: '/popular-show-more',
-                    widget: PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Sortie Restorant", cafe_name: "Sortie Restorant", rev_count: 52, stars: 4, isMain: true),
+                    widget: PlaceBox(
+                        image_adress: 'assets/images/yeatyAppLoginBg.jpg',
+                        title: "Sortie Restorant",
+                        cafe_name: "Sortie Restorant",
+                        rev_count: 52,
+                        stars: 4,
+                        isMain: true),
                   ),
                 ],
                 if (currentindex == 5) ...[
-                  CustomIntroWidget(
+                  const CustomIntroWidget(
                     maintitle: "Tatlı diyince akla gelenler",
-                    description: "Birbirinden güzel tatlıcılar ile gününüze neşe katın. Yeaty fırsatlarını keşfedin",
+                    description:
+                        "Birbirinden güzel tatlıcılar ile gününüze neşe katın. Yeaty fırsatlarını keşfedin",
                     direction_name: 'Tümünü gör',
                     direction_path: '/popular-show-more',
-                    widget: PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "Uber Burger", cafe_name: "De'la Carte Cafe", rev_count: 52, stars: 4, isMain: true),
+                    widget: PlaceBox(
+                        image_adress: 'assets/images/yeatyAppLoginBg.jpg',
+                        title: "Uber Burger",
+                        cafe_name: "De'la Carte Cafe",
+                        rev_count: 52,
+                        stars: 4,
+                        isMain: true),
                   ),
                 ],
                 if (currentindex == 6) ...[
-                  CustomIntroWidget(
+                  const CustomIntroWidget(
                     maintitle: "Açık Hava Mekanları",
-                    description: "Şehrin keşmekeşinden kurtulup rahat bir nefes alırken Yeaty fırsatlarının tadını çıkarın",
+                    description:
+                        "Şehrin keşmekeşinden kurtulup rahat bir nefes alırken Yeaty fırsatlarının tadını çıkarın",
                     direction_name: 'Tümünü gör',
                     direction_path: '/nw',
-                    widget: PlaceBox(image_adress: 'assets/images/yeatyAppLoginBg.jpg', title: "De'la Carte Cafe", cafe_name: "Bakırköy", rev_count: 52, stars: 4, isMain: true),
+                    widget: PlaceBox(
+                        image_adress: 'assets/images/yeatyAppLoginBg.jpg',
+                        title: "De'la Carte Cafe",
+                        cafe_name: "Bakırköy",
+                        rev_count: 52,
+                        stars: 4,
+                        isMain: true),
                   ),
                 ],
-                IntroTitle(
+                const IntroTitle(
                     mainTitle: "Bloglara göz atın",
-                    description: "Lokal mekanlardan benzersiz deneyimlerin sunulduğu Yeaty Blog'u keşfedin",
+                    description:
+                        "Lokal mekanlardan benzersiz deneyimlerin sunulduğu Yeaty Blog'u keşfedin",
                     direction_name: "Bloglara git",
                     direction_path: 'see-more'),
                 ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 3,
                     itemBuilder: ((context, index) {
-                      return BlogBox(
+                      return const BlogBox(
                         imageAdress: 'assets/images/campaignBgCafe.jpg',
-                        title: "Kadıköyün ara sokaklarında saklı kalmış bir hazine, sıcak samimi keyifli bir eğlence",
-                        description: "Lorem Ipsum bla bla this is description but i dont know what to write but i dont want to write lorem ipsum either pleeease help.",
+                        title:
+                            "Kadıköyün ara sokaklarında saklı kalmış bir hazine, sıcak samimi keyifli bir eğlence",
+                        description:
+                            "Lorem Ipsum bla bla this is description but i dont know what to write but i dont want to write lorem ipsum either pleeease help.",
                         author_image_path: 'assets/images/randomPerson.jpg',
                         author_name: "Semih Mert Utkan",
                         author_title: "Software Engineer",
                       );
                     })),
-                DiscoverOnMapBanner(),
+                const DiscoverOnMapBanner(),
               ],
             ),
           ),

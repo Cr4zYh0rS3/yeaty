@@ -10,15 +10,15 @@ class DiscoverOnMapBanner extends StatelessWidget {
     var deviceSize = MediaQuery.of(context).size;
     return ClipRRect(
       borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
-      child: Container(
+      child: SizedBox(
         width: deviceSize.width * 0.92,
         height: deviceSize.height * 0.195,
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               width: deviceSize.width * 0.92,
               height: deviceSize.height * 0.195,
-              child: Image(
+              child: const Image(
                 image: AssetImage('assets/images/LocationBg.png'),
                 fit: BoxFit.cover,
               ),
@@ -28,7 +28,7 @@ class DiscoverOnMapBanner extends StatelessWidget {
               width: deviceSize.width * 0.92,
               height: deviceSize.height * 0.195,
             ),
-            Container(
+            SizedBox(
               width: deviceSize.width * 0.92,
               height: deviceSize.height * 0.195,
               child: Column(

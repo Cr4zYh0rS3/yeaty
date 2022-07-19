@@ -44,10 +44,10 @@ class _ProductDetailsState extends State<ProductDetails> {
               ],
             )),
           ),
-          Container(
+          SizedBox(
             width: deviceSize.width,
             height: deviceSize.height * 0.3,
-            child: Image(
+            child: const Image(
               image: AssetImage("assets/images/mainDishStoreBg.jpg"),
               fit: BoxFit.cover,
             ),

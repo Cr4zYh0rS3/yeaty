@@ -21,11 +21,11 @@ class _CafeDetailState extends State<CafeDetail> {
     var deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           //crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CarouselImage(imagePath: [
+            const CarouselImage(imagePath: [
               'assets/images/coldDrinksStoreBg.jpg',
               'assets/images/mainDishStoreBg.jpg',
               'assets/images/cafeImage6.jpg',
@@ -116,7 +116,7 @@ class _CafeDetailState extends State<CafeDetail> {
               ),
             ),
             SizedBox(height: deviceSize.height * 0.06),
-            IntroTitle(
+            const IntroTitle(
                 mainTitle: "Yeaty puanlar ile ödeyin",
                 description: "De'la Carte Cafe mekanında seçili ürünleri Yeaty puanlarınız ile ödeyin. Ardından oluşacak QR Kodu mekanındaki görevliye göstermeniz yeterli olacaktır.",
                 direction_name: "Tümünü gör",
@@ -125,9 +125,9 @@ class _CafeDetailState extends State<CafeDetail> {
               padding: EdgeInsets.only(left: deviceSize.width * 0.04),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Row(
-                  children: [
+                  children: const [
                     ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
                     ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
                     ProductBox(image_adress: 'assets/images/mainDishStoreBg.jpg', price: 60, title: "Uber Burger", cafe_name: "Uber Restorant", rev_count: 52, stars: 4, isMain: true),
@@ -136,10 +136,10 @@ class _CafeDetailState extends State<CafeDetail> {
               ),
             ),
             SizedBox(height: deviceSize.height * 0.03),
-            OtherFeatures(),
+            const OtherFeatures(),
             // Comment section
             SizedBox(height: deviceSize.height * 0.03),
-            Container(
+            SizedBox(
               width: deviceSize.width * 0.9,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,9 +149,9 @@ class _CafeDetailState extends State<CafeDetail> {
                     style: TextStyle(fontFamily: 'AirbnbCerealExtraBold', color: kMainToneBlack, fontSize: deviceSize.width * 0.045),
                   ),
                   SizedBox(height: deviceSize.height * 0.02),
-                  CommentCard(),
-                  CommentCard(),
-                  CommentCard(),
+                  const CommentCard(),
+                  const CommentCard(),
+                  const CommentCard(),
                 ],
               ),
             ),

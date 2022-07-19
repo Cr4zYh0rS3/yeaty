@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import '../../constants/colors.dart';
 
 class CarouselImage extends StatefulWidget {
@@ -23,7 +22,7 @@ class _CarouselImageState extends State<CarouselImage> {
         carouselController: carouselController,
         itemCount: widget.imagePath.length,
         itemBuilder: (context, index, realindex) {
-          return Container(
+          return SizedBox(
               width: deviceSize.width,
               child: Image(
                 image: AssetImage(widget.imagePath[index]),
@@ -132,7 +131,7 @@ class _CarouselImageState extends State<CarouselImage> {
                       backgroundColor: kShadedDarkColorWhite,
                       radius: deviceSize.width * 0.055,
                       child: Icon(
-                        isliked == false ? IconData(0xe800, fontFamily: 'CustomIcon4', fontPackage: null) : IconData(0xe800, fontFamily: 'CustomIcon5', fontPackage: null),
+                        isliked == false ? const IconData(0xe800, fontFamily: 'CustomIcon4', fontPackage: null) : const IconData(0xe800, fontFamily: 'CustomIcon5', fontPackage: null),
                         color: kLightToneRed,
                         size: deviceSize.width * 0.05,
                       ),

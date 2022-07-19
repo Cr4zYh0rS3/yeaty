@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
 import 'package:yeaty/constants/colors.dart';
 
 class RedButton extends StatelessWidget {
@@ -25,7 +24,7 @@ class RedButton extends StatelessWidget {
         child: Center(
           child: Text(
             text,
-            style: TextStyle(color: kShadedDarkColorWhite, fontFamily: "AirbnbCerealMedium"),
+            style: const TextStyle(color: kShadedDarkColorWhite, fontFamily: "AirbnbCerealMedium"),
           ),
         ),
       ),

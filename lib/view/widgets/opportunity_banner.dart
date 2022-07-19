@@ -12,15 +12,15 @@ class OpportunityBanner extends StatelessWidget {
       margin: EdgeInsets.only(top: deviceSize.height * 0.02),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(deviceSize.width * 0.02),
-        child: Container(
+        child: SizedBox(
           width: deviceSize.width * 0.92,
           height: deviceSize.height * 0.195,
           child: Stack(
             children: [
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.92,
                 height: deviceSize.height * 0.195,
-                child: Image(
+                child: const Image(
                   image: AssetImage('assets/images/turkKahvesi.jpg'),
                   fit: BoxFit.cover,
                 ),

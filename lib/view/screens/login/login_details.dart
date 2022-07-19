@@ -34,7 +34,7 @@ class _LoginDetailsState extends State<LoginDetails> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              SizedBox(
                 width: deviceSize.width * 0.9,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,7 +150,7 @@ class _LoginDetailsState extends State<LoginDetails> {
                   ],
                 ),
               ),
-              ConfirmButton(title: "Devam et", route: '/home', isEnd: true),
+              const ConfirmButton(title: "Devam et", route: '/home', isEnd: true),
             ],
           ),
         ),

@@ -28,7 +28,7 @@ class BlogBox extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
+          SizedBox(
               width: deviceSize.width * 0.4,
               height: deviceSize.height * 0.25,
               child: ClipRRect(
@@ -38,7 +38,7 @@ class BlogBox extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               )),
-          Container(
+          SizedBox(
             width: deviceSize.width * 0.5,
             height: deviceSize.height * 0.25,
             child: Column(

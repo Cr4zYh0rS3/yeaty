@@ -19,7 +19,7 @@ class CommentCard extends StatelessWidget {
               CircleAvatar(
                 radius: deviceSize.width * 0.06,
                 backgroundColor: Colors.transparent,
-                backgroundImage: AssetImage("assets/images/randomPerson.jpg"),
+                backgroundImage: const AssetImage("assets/images/randomPerson.jpg"),
               ),
               SizedBox(width: deviceSize.width * 0.02),
               Column(
