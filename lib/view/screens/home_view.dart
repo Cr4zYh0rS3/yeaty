@@ -44,14 +44,16 @@ class _HomeViewState extends State<HomeView> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              const IconData(0xf14e, fontFamily: 'CustomIcon', fontPackage: null),
+              const IconData(0xf14e,
+                  fontFamily: 'CustomIcon', fontPackage: null),
               size: deviceSize.width * 0.06,
             ),
             label: 'Keşfet',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              const IconData(0xe800, fontFamily: 'CustomIcon2', fontPackage: null),
+              const IconData(0xe800,
+                  fontFamily: 'CustomIcon2', fontPackage: null),
               size: deviceSize.width * 0.06,
             ),
             label: 'Fırsatlar',
@@ -72,7 +74,8 @@ class _HomeViewState extends State<HomeView> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              const IconData(0xe82a, fontFamily: 'CustomIcon3', fontPackage: null),
+              const IconData(0xe82a,
+                  fontFamily: 'CustomIcon3', fontPackage: null),
               size: deviceSize.width * 0.06,
             ),
             label: 'Profil',
